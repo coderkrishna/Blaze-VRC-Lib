@@ -1,0 +1,6 @@
+makefile
+CompProject2.v5code
+compile_commands.json
+/vex
+/vex/mkenv.mk
+/vex/mkrules.mk
