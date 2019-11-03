@@ -84,6 +84,11 @@ void usercontrol(void) {
   }
 }
 
+int CalculateSomething(int x, int a, int c, int bravo)
+{
+   return x + a + c + bravo;
+}
+
 //
 // Main will set up the competition functions and callbacks.
 //
@@ -94,6 +99,22 @@ int main() {
 
   // Run the pre-autonomous function.
   pre_auton();
+
+  int x = 4;
+  int a = 4;
+  int c = 10;
+  int bravo = 21;
+
+  int result = CalculateSomething(x, a, c, bravo);
+
+  if (Controller1.ButtonL1.pressing())
+  {
+    Drivetrain.driveFor(2,inches);
+  }
+  else
+  {
+    Drivetrain.stop();
+  }
 
   // Prevent main from exiting with an infinite loop.
   while (true) {
